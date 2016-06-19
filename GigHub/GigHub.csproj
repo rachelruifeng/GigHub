@@ -210,10 +210,12 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AttendancesController.cs" />
+    <Compile Include="Controllers\FollowingsController.cs" />
     <Compile Include="Controllers\GigsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Dtos\AttendanceDto.cs" />
+    <Compile Include="Dtos\FollowingDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -245,9 +247,18 @@
     <Compile Include="Migrations\201606180851343_AddAttendance.Designer.cs">
       <DependentUpon>201606180851343_AddAttendance.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201606190958461_AddFollowing.cs" />
+    <Compile Include="Migrations\201606190958461_AddFollowing.Designer.cs">
+      <DependentUpon>201606190958461_AddFollowing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606191030596_AddFollowing1.cs" />
+    <Compile Include="Migrations\201606191030596_AddFollowing1.Designer.cs">
+      <DependentUpon>201606191030596_AddFollowing1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Attendance.cs" />
+    <Compile Include="Models\Following.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\Gig.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
@@ -363,6 +374,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201606180851343_AddAttendance.resx">
       <DependentUpon>201606180851343_AddAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606190958461_AddFollowing.resx">
+      <DependentUpon>201606190958461_AddFollowing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606191030596_AddFollowing1.resx">
+      <DependentUpon>201606191030596_AddFollowing1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

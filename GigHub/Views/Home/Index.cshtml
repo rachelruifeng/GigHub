@@ -29,22 +29,33 @@
         </li>
     }
 </ul>
-@section scripts{
+@section scripts {
     <script>
         $(document).ready(function() {
             $(".js-toggle-attendance").click(function(e) {
-                    var button = $(e.target);
-                    $.post("/api/attendances", { gigId: button.attr("data-gig-id") })                
-                .done(function() {
-                    button
-                        .removeClass("btn-default")
-                        .addClass("btn-info")
-                        .text("Going");
-                })
-                .fail(function() {
-                    alert("Failed!");
-                });
+                var button = $(e.target);
+                $.post("/api/attendances", { gigId: button.attr("data-gig-id") })
+                    .done(function() {
+                        button
+                            .removeClass("btn-default")
+                            .addClass("btn-info")
+                            .text("Going");
+                    })
+                    .fail(function() {
+                        alert("Failed!");
+                    });
+            });
+            $(".js-toggle-follow").click(function(e) {
+                var button = $(e.target);
+                $.post("api/followings", { artistId: button.attr("data-user-id") })
+                    .done(function() {
+                        button
+                            .text("following");
+                    })
+                    .fail(function() {
+                        alert("Failed!");
+                    });
+            });
         });
-    });
     </script>
 }
